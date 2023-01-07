@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --softmagenta: hsl(300, 69%, 71%);
+}
+
+body {
+    margin: 0;
+    background: url(/images/bg-desktop.svg) no-repeat center center fixed;
+    background-color: var(--violet);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.logo {
+    width: 15rem;
+}
+.mainbody {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.information {
+    display: flex;
+    flex-direction: row;
+    width: 83rem;
+    justify-content: space-between;
+}
+.desc {
+    width: 35rem;
+}
+.desc h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+}
+.desc p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19.5px;
+    color: white;
+}
+.desc .register {
+    width: 13rem;
+    height: 3.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: var(--violet);
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.desc .register:hover {
+    background-color: var(--softmagenta);
+    color: white;
+}
+.links {
+    display: flex;
+    justify-content: end;
+}
+.links button {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.links button:hover {
+    color: var(--softmagenta);
+    border-color: var(--softmagenta);
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-image: url(/images/bg-mobile.svg);
+    }
+    .logodiv {
+        text-align: start;
+        width: 25rem;
+    }
+    .logo {
+        width: 10rem;
+    }
+    .mainbody {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .information {
+        width: 25rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .information img {
+        width: 25rem;
+    }
+    .desc h1 {
+        font-size: 32px;
+    }
+    .desc {
+        width: 25rem;
+    }
+    .links {
+        display: flex;
+        justify-content: center;
+    }
+}
